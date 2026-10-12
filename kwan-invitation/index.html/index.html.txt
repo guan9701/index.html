@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>第十四届世界关氏慈亲大会 · 电子邀请函</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: #f3efe8;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Songti SC", "Noto Serif SC", "Times New Roman", serif;
+      padding: 12px 8px 30px;
+      display: flex;
+      justify-content: center;
+      line-height: 1.7;
+      color: #2d2a24;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .invitation-card {
+      max-width: 1000px;
+      width: 100%;
+      background: #fffcf7;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+      border-radius: 10px;
+      padding: 28px 18px 36px;
+      border: 1px solid #e6dcc8;
+      position: relative;
+    }
+
+    .invitation-card::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 18px;
+      right: 18px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #b8945c, #9e7b4b, #b8945c, transparent);
+    }
+
+    .logo-area {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 14px;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-placeholder {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #b22222;
+      color: #ffd966;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      text-align: center;
+      font-weight: bold;
+      border: 2.5px solid #8b1a1a;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      padding: 4px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 22px;
+      text-align: center;
+      color: #8b1a1a;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin: 4px 0 2px;
+      font-family: "STKaiti", "KaiTi", "PingFang SC", serif;
+    }
+
+    .subhead {
+      text-align: center;
+      font-size: 14px;
+      color: #6b5a44;
+      letter-spacing: 2px;
+      margin-bottom: 2px;
+    }
+
+    .subhead-en {
+      text-align: center;
+      font-size: 12px;
+      color: #8a7a64;
+      letter-spacing: 0.5px;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .date-place {
+      text-align: center;
+      font-size: 14px;
+      color: #9e7b4b;
+      border-top: 1px dashed #dac29e;
+      border-bottom: 1px dashed #dac29e;
+      padding: 8px 0;
+      margin: 10px 0 18px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .date-place i {
+      font-style: normal;
+      margin: 0 6px;
+      color: #b8945c;
+    }
+
+    .letter-content {
+      font-size: 15px;
+      text-align: justify;
+      margin-bottom: 22px;
+    }
+
+    .letter-content p {
+      margin-bottom: 10px;
+      text-indent: 2em;
+    }
+
+    .letter-content .no-indent {
+      text-indent: 0;
+    }
+
+    .signature-block {
+      text-align: right;
+      margin: 16px 0 8px;
+      font-size: 14px;
+      line-height: 1.9;
+      padding-right: 4px;
+    }
+
+    .signature-block .name {
+      font-weight: 700;
+      color: #8b1a1a;
+    }
+
+    .address-foot {
+      text-align: center;
+      font-size: 12px;
+      color: #7a6a54;
+      margin-top: 6px;
+      border-top: 1px solid #e6dcc8;
+      padding-top: 14px;
+      letter-spacing: 0.3px;
+      line-height: 1.8;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #8b1a1a;
+      text-align: center;
+      margin: 32px 0 14px;
+      letter-spacing: 2px;
+      position: relative;
+      font-family: "STKaiti", "KaiTi", "PingFang SC", serif;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2.5px;
+      background: #b8945c;
+      margin: 6px auto 0;
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #6b4e2e;
+      margin: 18px 0 8px;
+      border-left: 4px solid #b8945c;
+      padding-left: 10px;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 13px;
+      word-break: break-word;
+    }
+
+    .info-table th,
+    .info-table td {
+      border: 1px solid #d8cbb4;
+      padding: 7px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .info-table th {
+      background: #f5eddf;
+      font-weight: 700;
+      color: #5a3e1e;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    .info-table td {
+      background: #fffcf7;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .schedule-day {
+      background: #fcf8f0;
+      border: 1px solid #e6dcc8;
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .schedule-day .day-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #8b1a1a;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed #dac29e;
+      padding-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .schedule-day ul {
+      list-style: none;
+      padding: 0;
+      font-size: 13.5px;
+      color: #3d352b;
+    }
+
+    .schedule-day ul li {
+      padding: 2px 0 2px 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .schedule-day ul li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      color: #b8945c;
+      font-size: 9px;
+      top: 6px;
+    }
+
+    .schedule-note {
+      font-size: 12px;
+      color: #8a7a64;
+      text-align: right;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .form-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 14px 0 8px;
+      border: 1px solid #d8cbb4;
+      border-radius: 8px;
+      background: #fffcf7;
+      padding: 4px;
+    }
+
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 820px;
+    }
+
+    .form-table th,
+    .form-table td {
+      border: 1px solid #d8cbb4;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .form-table th {
+      background: #f5eddf;
+      color: #5a3e1e;
+      font-weight: 700;
+      font-size: 11px;
+      white-space: nowrap;
+      padding: 6px 2px;
+    }
+
+    .form-table td input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 12px;
+      font-family: inherit;
+      text-align: center;
+      padding: 3px 1px;
+      color: #2d2a24;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+
+    .form-table td input:focus {
+      background: #fff9e6;
+      border-radius: 2px;
+    }
+
+    .form-table .total-row td {
+      background: #f5eddf;
+      font-weight: 700;
+      color: #5a3e1e;
+      text-align: right;
+      padding-right: 8px;
+      font-size: 12px;
+    }
+
+    .form-table .total-row td:first-child {
+      text-align: center;
+    }
+
+    .form-table .total-row input {
+      text-align: center;
+    }
+
+    .supplement-box {
+      background: #fcf8f0;
+      border-left: 5px solid #b8945c;
+      padding: 14px 16px;
+      margin: 14px 0 8px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .supplement-box strong {
+      color: #8b1a1a;
+    }
+
+    .supplement-box .bank-info {
+      background: #fffcf7;
+      padding: 10px 12px;
+      border-radius: 6px;
+      margin: 8px 0;
+      border: 1px dashed #dac29e;
+      font-family: "Courier New", monospace;
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .supplement-box ol {
+      padding-left: 20px;
+      margin-top: 4px;
+    }
+
+    .supplement-box ol li {
+      margin-bottom: 2px;
+    }
+
+    @media (min-width: 600px) {
+      .schedule-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .invitation-card {
+        padding: 40px 35px 45px;
+      }
+      h1 {
+        font-size: 28px;
+        letter-spacing: 5px;
+      }
+      .info-table {
+        font-size: 14px;
+      }
+      .form-table {
+        font-size: 13px;
+        min-width: 900px;
+      }
+      .form-table th {
+        font-size: 12px;
+        padding: 8px 4px;
+      }
+      .form-table td input {
+        font-size: 13px;
+        padding: 4px 2px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .invitation-card {
+        box-shadow: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 0;
+      }
+      .invitation-card::before {
+        display: none;
+      }
+      .form-table td input {
+        border-bottom: 1px solid #ccc;
+      }
+      .section-title {
+        page-break-after: avoid;
+      }
+      .schedule-grid {
+        page-break-inside: avoid;
+      }
+      .form-wrapper {
+        border: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="invitation-card">
+
+  <div class="logo-area">
+    <div class="logo-placeholder"><span>世界關氏<br>宗親總會</span></div>
+    <div class="logo-placeholder"><span>旅港關氏<br>宗親總會</span></div>
+    <div class="logo-placeholder"><span>第十四屆<br>懇親大會</span></div>
+  </div>
+
+  <h1>第十四届世界关氏慈亲大会</h1>
+  <div class="subhead">電 子 邀 請 函</div>
+  <div class="subhead-en">Kwan's 14th Global Triennial Convention</div>
+
+  <div class="date-place">
+    2026年11月3日 <i>—</i> 11月8日
+    <br>
+    中国香港 · 佛山九江 · 开平赤坎
+  </div>
+
+  <div class="letter-content">
+    <p><strong>尊敬的先生／女士：</strong></p>
+    <p>世界关氏慈亲大会自上世纪八十年代初在香港首次举办以来，推演至今已经是第十四届。每三年一度的慈亲会，一直是我们联系宗亲、加强沟通、推动优良宗族文化的重要活动。</p>
+    <p>香港地处中国大门，近年大湾区蓬勃发展，东方之珠的魅力与大湾区的中华盛世，对海外华侨有很大的吸引力。在各地宗亲的支持下，我们铁定在本年倾力打造一个跨越<strong>香港—九江—开平</strong>三地的慈亲大会，时间定于<strong>2026年11月3日至11月8日</strong>期间举行。我们的执行委员会已经成立并积极推动。</p>
+    <p>我们至诚邀请贵会／公所发起并积极参与是届慈亲大会，并聘请贵公所才俊热诚参与大会各荣誉职位，务求各尽所能，共襄盛举。</p>
+    <p>兹检附大会资料如下：</p>
+    <p class="no-indent" style="text-indent:0; padding-left:2em;">
+      甲、第十四届世界关氏慈亲大会执行委员会名单（附各联络委员名单及电话／电邮等）<br>
+      乙、大会之节目行程表<br>
+      丙、大会收费及各荣誉职位的奖励办法
+    </p>
+    <p>万众期待，正等着阁下／贵司的积极参与！</p>
+    <p style="text-align:right; text-indent:0; margin-top:14px;"><strong>此致</strong></p>
+    <div class="signature-block">
+      <div>世界关氏总会主席 <span class="name">关华正</span></div>
+      <div>第十四届世界关氏慈亲大会执行委员会主席 <span class="name">关荣健</span></div>
+      <div>2026年7月1日</div>
+    </div>
+  </div>
+
+  <div class="address-foot">
+    旅港关氏宗亲总会<br>
+    香港九龙佐敦道渡船角文华楼二十四号四楼二十四室<br>
+    FLAT 24, 3RD FL, 24 MAN WAH HOUSE, FERRY POINT, JORDAN RD., KOWLOON, H.K.<br>
+    TEL：2385 7743 &nbsp;|&nbsp; FAX：2385 7347 &nbsp;|&nbsp; E-mail：hkkwansa@gmail.com
+  </div>
+
+  <div class="section-title">一、大会基本信息</div>
+
+  <table class="info-table">
+    <tr><th style="width:90px;">主办单位</th><td>旅港关氏宗亲总会</td></tr>
+    <tr><th>地点</th><td>中国香港、中国佛山九江镇及中国开平市赤坎镇三地</td></tr>
+    <tr><th>日期</th><td>2026年11月3日至11月8日</td></tr>
+    <tr><th>代表</th><td>由各地关氏宗亲会／组织自行推选，无名额限制</td></tr>
+    <tr><th>代表义务</th><td>应全程参与各次会议</td></tr>
+    <tr><th>住宿费用</th><td>代表及祝贺团团员住宿费用由各自负担</td></tr>
+    <tr><th>膳食及外访</th><td>代表及祝贺团团员在大会期间膳食及旅行外访由恳亲大会安排招待</td></tr>
+    <tr><th>参团费</th><td>每位美元 <strong>$800.00</strong>（已包括三地住宿交通费，请细阅备注）</td></tr>
+    <tr><th>报名截止</th><td>2026年8月31日或前递交姓名（连同近照一幅）、人数及汇款予旅港关氏宗亲总会</td></tr>
+  </table>
+
+  <div class="section-subtitle">汇款银行资料</div>
+  <table class="info-table">
+    <tr><th style="width:90px;">银行名称</th><td>恒生银行有限公司 Hang Seng Bank Limited</td></tr>
+    <tr><th>地址</th><td>香港德辅道中83号</td></tr>
+    <tr><th>SWIFT Code</th><td>HASEHKHH</td></tr>
+    <tr><th>CHIPS NO.</th><td>010522（用于美国汇款香港）</td></tr>
+    <tr><th>银行号码</th><td>Bank Code：024</td></tr>
+    <tr><th>账号</th><td>305-695454-883</td></tr>
+    <tr><th>户名</th><td>旅港关氏宗亲总会 The Hong Kong Kwan's Clansmen Association</td></tr>
+  </table>
+
+  <div style="background:#fcf8f0; padding:10px 14px; border-radius:6px; font-size:13px; border:1px solid #e6dcc8; margin-bottom:8px;">
+    <strong>备注：</strong><br>
+    A. 参与费包括：①行程表内所列明的酒店住宿、观光巴士、景点入场费、餐饮。②酒店以两人一房为原则，如需要改为单人房，须补当时差价（金额约 HKD 1,800.00 元或 USD 230 元）。<br>
+    B. 请各参团者自行购买旅游保险。
+  </div>
+
+  <div class="section-title">二、大会日程简介（更新版）</div>
+
+  <div class="schedule-grid">
+    <div class="schedule-day">
+      <div class="day-title">2026年11月3日</div>
+      <ul>
+        <li>迎宾——各宗亲先在大堂报到</li>
+        <li>大会登记时间：下午2:00—4:00</li>
+        <li>下午3:00取房</li>
+        <li>入住荃湾悦来酒店</li>
+        <li>举行欢迎宴于尖沙咀东彩福皇宴</li>
+        <li>全球各地关氏代表之会务报告</li>
+      </ul>
+    </div>
+    <div class="schedule-day">
+      <div class="day-title">2026年11月4日</div>
+      <ul>
+        <li>酒店享用自助早餐</li>
+        <li>元朗大棠关帝广场举行祭祖活动</li>
+        <li>午餐享用当地美味菜色</li>
+        <li>尖沙咀星光大道及码头钟楼</li>
+        <li>乘坐东方之珠号游轮观看维多利亚港夜色</li>
+        <li>享受丰富自助餐</li>
+        <li>前往深圳登喜路国际大酒店</li>
+      </ul>
+    </div>
+    <div class="schedule-day">
+      <div class="day-title">2026年11月5日</div>
+      <ul>
+        <li>酒店享用自助早餐</li>
+        <li>由深圳前往九江关帝庙祭祖／炮仗</li>
+        <li>九江关氏祖祠树德堂午宴</li>
+        <li>佛山市观看《广东千古情》演出</li>
+        <li>九江文化楼举行晚宴及观赏文艺表演</li>
+        <li>入住九江源林酒店或维也纳酒店</li>
+      </ul>
+    </div>
+    <div class="schedule-day">
+      <div class="day-title">2026年11月6日</div>
+      <ul>
+        <li>酒店享用自助早餐</li>
+        <li>由九江前往江门参观【中国侨都华侨华人博物馆】</li>
+        <li>丽宫国际酒店午餐</li>
+        <li>由江门前往开平水口龙冈古庙</li>
+        <li>关氏祖村大梧村祭祖仪式观赏舞火龙及晚宴</li>
+        <li>入住赤坎古镇酒店</li>
+      </ul>
+    </div>
+    <div class="schedule-day">
+      <div class="day-title">2026年11月7日</div>
+      <ul>
+        <li>酒店享用自助早餐</li>
+        <li>拜访赤坎关族图书馆</li>
+        <li>前往光裕堂举行祭祖活动</li>
+        <li>古镇文化楼午宴观赏文艺表演</li>
+        <li>下午进行世关会议及换届选举</li>
+        <li>惜别晚宴诚邀开平市领导颁发奖学金／市领导致辞并对话开平市投资环境推介暨世懋交旗仪式</li>
+        <li>继续入住赤坎古镇酒店</li>
+      </ul>
+    </div>
+    <div class="schedule-day">
+      <div class="day-title">2026年11月8日</div>
+      <ul>
+        <li>酒店自助早餐后各宗亲进行退房</li>
+        <li>早餐后活动完满结束</li>
+        <li>需要乘坐旅游巴士回港请向大会登记</li>
+        <li>下次再会</li>
+      </ul>
+    </div>
+  </div>
+  <div class="schedule-note">备注：确切行程会因应当时当地实况作适当调整。</div>
+
+  <div class="section-title">三、参与办法及赞助方案</div>
+
+  <table class="info-table" style="font-size:12px;">
+    <thead>
+      <tr>
+        <th>类别</th>
+        <th>参与办法及赞助方案</th>
+        <th>港元/位 HKD</th>
+        <th>折美元/位 USD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:center;">A</td><td>第十四届世界关氏恳亲大会总会主席登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 5 位）</td><td>50,000.00</td><td>6,410.00</td></tr>
+      <tr><td style="text-align:center;">B</td><td>第十四届世界关氏恳亲大会筹备委员会主席登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 5 位）</td><td>50,000.00</td><td>6,410.00</td></tr>
+      <tr><td style="text-align:center;">C</td><td>大会首席荣誉会长登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 4 位）</td><td>35,000.00</td><td>4,487.00</td></tr>
+      <tr><td style="text-align:center;">D</td><td>筹委会荣誉主席登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 3 位）</td><td>30,000.00</td><td>3,846.00</td></tr>
+      <tr><td style="text-align:center;">E</td><td>筹委会荣誉会长登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 2 位）</td><td>25,000.00</td><td>3,205.00</td></tr>
+      <tr><td style="text-align:center;">F</td><td>筹委会名誉会长登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 2 位）</td><td>20,000.00</td><td>2,564.00</td></tr>
+      <tr><td style="text-align:center;">G</td><td>荣誉顾问登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 2 位）</td><td>15,000.00</td><td>1,923.00</td></tr>
+      <tr><td style="text-align:center;">H</td><td>名誉顾问登记令订 1 幅相，1 版 + 纪念礼品（免参团费用 1 位）</td><td>8,000.00</td><td>1,026.00</td></tr>
+      <tr><td style="text-align:center;">I</td><td>只参团香港及国内行程（包住宿交通费用）6日5夜</td><td>6,240.00</td><td>800.00</td></tr>
+      <tr><td style="text-align:center;">J</td><td>只参团香港行程（包住宿交通费用）3日2夜</td><td>3,000.00</td><td>385.00</td></tr>
+      <tr><td style="text-align:center;">K</td><td>只参团国内行程，届时于佛山九江源林酒店集合，4日3夜</td><td>3,500.00</td><td>450.00</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-subtitle">广告赞助</div>
+  <table class="info-table" style="font-size:12px;">
+    <thead>
+      <tr><th>类别</th><th>项目</th><th>港元/位 HKD</th><th>折美元/位 USD</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:center;">A1</td><td>封面内页</td><td>3,000.00</td><td>385.00</td></tr>
+      <tr><td style="text-align:center;">A2</td><td>广告赞助内页</td><td>2,000.00</td><td>257.00</td></tr>
+      <tr><td style="text-align:center;">A3</td><td>封底</td><td>3,000.00</td><td>385.00</td></tr>
+      <tr><td style="text-align:center;">A4</td><td>封底内页</td><td>2,000.00</td><td>257.00</td></tr>
+    </tbody>
+  </table>
+
+  <div style="text-align:center; font-weight:700; color:#8b1a1a; margin:8px 0 16px; font-size:15px;">
+    截止日期：2026年8月31日
+  </div>
+
+  <div class="section-title">四、大会报名表</div>
+
+  <p style="margin-bottom:8px; font-size:15px;"><strong>关氏宗亲团体：</strong>
+    <input type="text" placeholder="请填写团体名称" style="border:none; border-bottom:1.5px solid #b8945c; background:transparent; font-size:15px; padding:3px 6px; width:200px; outline:none; font-family:inherit;">
+  </p>
+
+  <div class="form-wrapper">
+    <table class="form-table">
+      <thead>
+        <tr>
+          <th style="width:32px;">序号</th>
+          <th style="width:70px;">姓名</th>
+          <th style="width:80px;">英文姓名<br>性别（男/女）</th>
+          <th style="width:90px;">护照号码<br>有效期至</th>
+          <th style="width:60px;">报名费<br>$</th>
+          <th style="width:50px;">合计</th>
+          <th style="width:70px;">社团<br>职务</th>
+          <th style="width:80px;">航班抵港<br>时间编号</th>
+          <th style="width:80px;">航班离开<br>时间编号</th>
+          <th style="width:70px;">房型<br>退房日期</th>
+          <th style="width:90px;">手机号码</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>2</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>3</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>4</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>5</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>6</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>7</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>8</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>9</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="tel" placeholder=""></td></tr>
+        <tr><td>10</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td
